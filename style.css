@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+}
+section{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: floating 5s linear infinite; 
+    animation-direction: alternate;
+}
+section h1 {
+    font-size: 150px;
+    color: white;
+    text-shadow: -10px 5px 1px #3a3737a3;
+    font-family: 'Tangerine', cursive;
+    position: relative;
+}
+section h3 {
+    font-size: 100px;
+    color: white;
+    text-shadow: -10px 5px 1px #3a3737a3;
+    font-family: 'Tangerine', cursive;
+    position: relative;
+    margin-bottom: 10px;
+    letter-spacing: 3px
+}
+
+section h1::before {
+    content: '';
+    position: absolute;
+    left: -100px;
+    top: -180px;
+    width: 200px;
+    height: 100px;
+    border-left: 15px solid #fff;
+    border-radius: 50px;
+    background: transparent;    
+    transform: rotate(-20deg);
+}
+
+@keyframes floating{
+    0%{
+        left: 49%;
+    }
+    25%{
+        top: 49%;
+    }
+    75%{
+        left: 51%;
+    }
+    100%{
+        top: 51%;
+    }
+}
+
+.mosque {
+    background-image: url(../images/mosque%20.png);
+    min-height: 200px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 600px;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    animation: anim 15s linear infinite;
+}
+
+.mosque::before {
+    content: '';
+    background-image: url(../images/mosque%20.png);
+    min-height: 384px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 1000px;
+    position: absolute;
+    bottom: -18px;
+    opacity: .5;
+    left: 0;
+    width: 100%;
+    animation: anim 15s linear infinite;
+    animation-direction: reverse;
+}
+
+@keyframes anim{
+    0%{
+        background-position: -100px;
+    }
+    100%{
+        background-position: 1600px;
+    }
+}
+.particles-js-canvas-el{
+    position: absolute;
+    left:0;
+    top:0;
+    min-height: 80vh;
+}
+
+
+
